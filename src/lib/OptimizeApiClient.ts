@@ -5,14 +5,33 @@ import { DashboardCollection, DashboardDefinition, EntityImportResponse, ReportC
 import { ReportResults } from "./ReportResults";
 const pkg = require('../../package.json')
 
+/**
+ * @description The high-level API client for Optimize.
+ * @example 
+ * ```
+ * const optimize = new OperateApiClient()
+ * 
+ * async function main() {
+ *     await optimize.enableSharing()
+ *     const id = "8a7103a7-c086-48f8-b5b7-a7f83e864688"
+ *     const res = await optimize.exportDashboardDefinitions([id])
+ *     fs.writeFileSync('exported-dashboard.json', JSON.stringify(res, null, 2))
+ * }
+ * 
+ * main()
+ * ```  
+ */
 export class OptimizeApiClient {
     private userAgentString: string
-    // baseUrl: string
     private gotOptions: { prefixUrl: string; }
 
     /**
      * 
      * @param userAgent An optional custom string to add to the user-agent for API calls
+     * @example
+     * ```
+     * const optimize = new OptimizeApiClient()
+     * ```
      */
     constructor(userAgent?: string) {
         const customAgent = userAgent ? ` ${userAgent}` : ``
