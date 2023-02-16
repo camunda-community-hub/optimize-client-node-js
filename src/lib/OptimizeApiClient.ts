@@ -9,7 +9,7 @@ const pkg = require('../../package.json')
  * @description The high-level API client for Optimize.
  * @example 
  * ```
- * const optimize = new OperateApiClient()
+ * const optimize = new OptimizeApiClient()
  * 
  * async function main() {
  *     await optimize.enableSharing()
