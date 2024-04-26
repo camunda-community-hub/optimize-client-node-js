@@ -1,5 +1,7 @@
 # Optimize API Client for Node.js
 
+# This SDK is deprecated and is not being maintained. With the release of Camunda 8.5 [this is the Node.js SDK to use](https://github.com/camunda-community-hub/camunda-8-js-sdk)
+
 [![NPM](https://nodei.co/npm/optimize-api-client.png)](https://npmjs.org/package/optimize-api-client) 
 
 ![Community Extension](https://img.shields.io/badge/Community%20Extension-An%20open%20source%20community%20maintained%20project-FF4700)
